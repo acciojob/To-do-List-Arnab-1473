@@ -8,7 +8,7 @@ function addTodo(){
     if(newTodo !== ""){
         const listItem = document.createElement("li");
         listItem.innerText = newTodo;
-        todolist.appendChild(listItem);
+        todoList.appendChild(listItem);
         input.value = "";
     }
 }
