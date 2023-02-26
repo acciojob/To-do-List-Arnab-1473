@@ -1,17 +1,11 @@
-//your code here
-const input = document.getElementById("newTodoInput");
-const button = document.getElementById("addTodoBtn");
-const todoList = document.getElementById("todoList");
-
-function addTodo(){
-    const newTodo = input.ariaValueMax.trim();
-    if(newTodo !== ""){
-        const listItem = document.createElement("li");
-        listItem.innerText = newTodo;
-        todoList.appendChild(listItem);
-        input.value = "";
-    }
+function addTodo() {
+  const todoText = newTodoInput.value.trim();
+  if (todoText !== "") {
+    const todoItem = document.createElement("li");
+    todoItem.innerText = todoText;
+    todoList.appendChild(todoItem);
+    newTodoInput.value = "";
+  }
 }
 
-button.addEventListener("click", addTodo);
-
+addTodoBtn.addEventListener("click", addTodo);
